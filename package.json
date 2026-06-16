@@ -1,0 +1,41 @@
+{
+  "name": "workdesk-support-backend",
+  "version": "1.0.0",
+  "description": "Backend API for WorkDesks Support Ticket System",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:seed": "node src/scripts/seedData.js",
+    "db:reset": "node src/scripts/seedData.js",
+    "db:verify-demo": "node src/scripts/verifyDemoUsers.js",
+    "email:inbound": "node src/scripts/inboundEmailWorker.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "support-desk",
+    "helpdesk",
+    "ticket-system",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^7.0.12",
+    "imapflow": "^1.0.190",
+    "mailparser": "^3.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
